@@ -1,0 +1,23 @@
+{
+  "name": "RPSLS_Project",
+  "version": "1.0.0",
+  "description": "Rock Paper Scissors Lizard Spock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-Mosher/RPSLS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-Mosher/RPSLS/issues"
+  },
+  "homepage": "https://github.com/A-Mosher/RPSLS#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
