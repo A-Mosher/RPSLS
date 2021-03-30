@@ -1,10 +1,11 @@
 {
-  "name": "RPSLS_Project",
+  "name": "rpsls_project",
   "version": "1.0.0",
   "description": "Rock Paper Scissors Lizard Spock",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
