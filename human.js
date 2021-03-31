@@ -1,4 +1,4 @@
-const Player = require('./player')
+const Player = require('./player');
 
 const prompt = require('prompt-sync')();
 
@@ -12,7 +12,7 @@ class Human extends Player {
         let gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
         let userInput = prompt("Do you choose Rock, Paper, Scissors, Lizard, or Spock?");
         if(gestures.includes(userInput)){
-            
+            console.log(human + " has chosen " + userInput + "!");
         }
     }
 }
