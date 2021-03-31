@@ -1,6 +1,6 @@
 "use strict";
 
-const Player = require('./player');
+const {Player} = require('./player');
 
 class AI extends Player {
 
@@ -10,8 +10,6 @@ class AI extends Player {
 
     chooseGesture() {
         let gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-
-    pickARandomGesture(gestures)
         let randomPick = Math.floor(Math.random() * gestures.length);
         console.log(randomPick, gestures[randomPick]);
         //return gestures[randomPick];
@@ -21,10 +19,9 @@ class AI extends Player {
 }
 
 
-let player2 = new AI("computer");
-
-player2
+//let player2 = new AI("computer");
 
 
 
-module.exports = AI;
+
+module.exports.AI = AI

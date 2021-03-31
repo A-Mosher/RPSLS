@@ -5,7 +5,7 @@ const prompt = require('prompt-sync')();
 class Player {
     constructor(name) {
         this.score = 0;
-        this.name = name
+        this.name = name;
     }
 
     //chooseGesture() {
@@ -22,5 +22,5 @@ class Player {
 
 
 
-module.exports = Player;
+module.exports.Player = Player
 

@@ -1,4 +1,4 @@
-const Player = require('./player');
+const {Player} = require('./player');
 
 const prompt = require('prompt-sync')();
 
@@ -17,4 +17,4 @@ class Human extends Player {
     }
 }
 
-module.exports = Human
+module.exports.Human = Human
