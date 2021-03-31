@@ -14,9 +14,16 @@ class AI extends Player {
     pickARandomGesture(gestures)
         let randomPick = Math.floor(Math.random() * gestures.length);
         console.log(randomPick, gestures[randomPick]);
-        return gestures[randomPick];
+        //return gestures[randomPick];
+        console.log(this.name + " has chosen " + gestures[randomPick] + "!");
     }
+    //console.log(this.name + " has chosen " + gestures[randomPick] + "!");
 }
+
+
+let player2 = new AI("computer");
+
+player2
 
 
 
