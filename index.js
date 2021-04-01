@@ -1,15 +1,36 @@
 "use strict";
+const { Game } = require('./game')
+
+let game = Game()
+game.runGame()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //To test:
 //import human
 //instantiate one human
 //use dot notation to test method
-const prompt = require('prompt-sync')();
 
-const {Player} = require('./player');
-const {Human} = require('./human');
-const {AI} = require('./AI');
 
-let name1 = prompt("Hello Player 1, what is your name?");
+/*let name1 = prompt("Hello Player 1, what is your name?");
 let player1 = new Human(name1);
 let player2
     
@@ -35,7 +56,8 @@ function chooseOpponent(){
 }
 
 chooseOpponent();
+*/
+//player1.chooseGesture();
 
-player1.chooseGesture();
+//player2.chooseGesture();
 
-player2.chooseGesture();

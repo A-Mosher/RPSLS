@@ -14,6 +14,7 @@ class AI extends Player {
         console.log(randomPick, gestures[randomPick]);
         //return gestures[randomPick];
         console.log(this.name + " has chosen " + gestures[randomPick] + "!");
+        return gestures[randomPick];
     }
     //console.log(this.name + " has chosen " + gestures[randomPick] + "!");
 }

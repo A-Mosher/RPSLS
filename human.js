@@ -13,6 +13,7 @@ class Human extends Player {
         let userInput = prompt("Do you choose Rock, Paper, Scissors, Lizard, or Spock?");
         if(gestures.includes(userInput)){
             console.log(this.name + " has chosen " + userInput + "!");
+            return userInput;
         }
     }
 }
