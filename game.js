@@ -38,41 +38,51 @@ class Game {
     runGame(){
         this.displayRules();
 
-
+        while(this.player1.score < 3 && this.player2.score > 3){
+            if(this.player1.chooseGesture() === chooseGesture[0] && (this.player2.chooseGesture() === chooseGesture[2] || this.player2.chooseGesture() === chooseGesture[3]));
+                console.log(this.player1 + " has won round 1");
+                this.player1.score++;
+            }
+        }    
         // organizes your other methods
     }
 
-    displayRules() {
+    displayRules(){
         console.log("Welcome to Rock, Paper, Scissors, Lizard, Spock!");
         console.log("It's very simple: Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard,\
             Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper,\
-            Paper disproves Spock, Spock vaporizes rock, and as it always has Rock covers Paper!");
-        console.log("Best of 3 wins!");
+            Paper disproves Spock, Spock vaporizes rock, and as it always has Rock crushes Scissors!");
+        console.log("Best of 3 wins!")
     }
 
+    //scoreKeeper() {
 
+    //}
 
-    keepScore() {
-        if (this.Player1.userinput === this.player1.chooseGesture(gestures[0]);
-    }
+    //rounds() {
+        //if (this.Player1.userinput === this.player1.chooseGesture(gestures[0]);
+    //}
 
 
     displayGameWinner() {
             if(this.player1.score === 2) {
               console.log(this.player1.name + " wins this game!");
             }
-            if (this.player2.score === 2) {
+            if(this.player2.score === 2) {
               console.log(this.player2.name + " wins this game!");
             }
     }
     
 }
-let gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-let rockBeats = (gestures[0] > gestures[2,3]);
-let paperBeats = (gestures[1] > gestures[0,4]);
-let scissorsBeats = (gestures[2] > gestures[1,3]);
-let LizardBeats = (gestures[3] > gestures[5,1]);
-let SpockBeats = (gestures[5] > gestures[0,3]);
+//this.chooseGesture() {
+
+//} 
+//gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+//let rockBeats = (gestures[0] > gestures[2,3]);
+//let paperBeats = (gestures[1] > gestures[0,4]);
+//let scissorsBeats = (gestures[2] > gestures[1,3]);
+//let LizardBeats = (gestures[3] > gestures[5,1]);
+//let SpockBeats = (gestures[5] > gestures[0,3]);
 
 
 
