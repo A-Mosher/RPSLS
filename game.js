@@ -5,7 +5,7 @@ const {AI} = require('./AI');
 class Game {
     constructor(){
         this.name1 = prompt("Hello Player 1, what is your name?");
-        this.player1 = new Human(name1);
+        this.player1 = new Human(this.name1);
         this.player2 = this.chooseOpponent();
     }
 
@@ -37,21 +37,67 @@ class Game {
 
     runGame(){
         this.displayRules();
+        //this.player1.chooseGesture();
+        //this.player2.chooseGesture();
+        
 
-        while(this.player1.score < 3 && this.player2.score > 3){
-            if(this.player1.chooseGesture() === chooseGesture[0] && (this.player2.chooseGesture() === chooseGesture[2] || this.player2.chooseGesture() === chooseGesture[3]));
-                console.log(this.player1 + " has won round 1");
-                this.player1.score++;
+        while(this.player1.score < 3 && this.player2.score < 3){
+            this.player1.chosenGesture = this.player1.chooseGesture();
+            this.player2.chosenGesture = this.player2.chooseGesture();
+            if(this.player1.chosenGesture == this.player1.possibleGestures[0] && (this.player2.chosenGesture == this.player2.possibleGestures[2] || this.player2.chosenGesture == this.player2.possibleGestures[3])){
+                this.possibleGestures.chosenGesture().
             }
         }    
+    }    
+
+
+
+
+
+
+
+
+
+
+
+
+            //     //if(this.player1.possibleGestures)
+            //     switch(chosenGesture){
+            //         case "Rock":
+            //             compareGestures();
+            //             return;
+            //     }
+            // }
+                    // case "Paper":
+                    //     compareGestures();
+                    //     return this.score;
+                    // case "Scissors":
+                    //     compareGestures();
+                    //     return this.score;
+                    // case "Lizard":
+                    //     compareGestures();
+                    //     return this.score;
+                    // case "Spock":
+                    //     compareGestures();
+                    //     return this.score;
+                    // default:
+                    //     return false;
+                //}
+            
+            //if(this.player1.possibleGestures)
+            //player2.chooseGesture();
+
+
+        
+        //}    
         // organizes your other methods
-    }
+    //}
 
     displayRules(){
         console.log("Welcome to Rock, Paper, Scissors, Lizard, Spock!");
         console.log("It's very simple: Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard,\
-            Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper,\
-            Paper disproves Spock, Spock vaporizes rock, and as it always has Rock crushes Scissors!");
+        Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper,\
+        Paper disproves Spock, Spock vaporizes rock, and as it always has Rock crushes Scissors!");
         console.log("Best of 3 wins!")
     }
 
@@ -64,7 +110,7 @@ class Game {
     //}
 
 
-    displayGameWinner() {
+    displayGameWinner(){
             if(this.player1.score === 2) {
               console.log(this.player1.name + " wins this game!");
             }

@@ -1,6 +1,6 @@
 "use strict";
 
-const {Player} = require('./player');
+const {Player} = require('./Player');
 
 class AI extends Player {
 

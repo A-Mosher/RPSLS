@@ -1,7 +1,7 @@
 "use strict";
-const { Game } = require('./game')
+const { Game } = require('./Game')
 
-let game = Game()
+let game =  new Game()
 game.runGame()
 
 

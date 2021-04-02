@@ -13,6 +13,7 @@ class Player {
         this.score = 0;
         this.name = name;
         this.possibleGestures = [Rock, Paper, Scissors, Lizard, Spock];
+        this.chosenGesture;
     }
 
     chooseGesture() {
