@@ -34,35 +34,32 @@ class Game {
 
     runGame(){
         this.displayRules();
-        //this.player1.chooseGesture();
-        //this.player2.chooseGesture();
         
-
         while(this.player1.score < 3 && this.player2.score < 3){
             this.player1.chosenGesture = this.player1.chooseGesture();
             this.player2.chosenGesture = this.player2.chooseGesture();
             if(this.player1.chosenGesture == this.player1.possibleGestures[0] && (this.player2.chosenGesture == this.player2.possibleGestures[2] || this.player2.chosenGesture == this.player2.possibleGestures[3] || this.player2.chosenGesture == this.player2.possibleGestures[0])){
-                this.player1.chosenGesture.compareGestures(this.player2.chosenGesture);
+                this.player1.chosenGesture.possibleGestures[0].compareGestures(this.player2.chosenGesture);
                 this.scoreKeeper();
-                displayGameWinner();
+                this.displayGameWinner();
             }
             if(this.player1.chosenGesture == this.player1.possibleGestures[1] && (this.player2.chosenGesture == this.player2.possibleGestures[0] || this.player2.chosenGesture == this.player2.possibleGestures[4] || this.player2.chosenGesture == this.player2.possibleGestures[1])){
-                this.player1.chosenGesture.compareGestures(this.player2.chosenGesture);
+                this.player1.chosenGesture.possibleGestures[1].compareGestures(this.player2.chosenGesture);
                 this.scoreKeeper();
                 this.displayGameWinner();
             }
             if(this.player1.chosenGesture == this.player1.possibleGestures[2] && (this.player2.chosenGesture == this.player2.possibleGestures[1] || this.player2.chosenGesture == this.player2.possibleGestures[3] || this.player2.chosenGesture == this.player2.possibleGestures[2])){
-                this.player1.chosenGesture.compareGestures(this.player2.chosenGesture);
+                this.player1.chosenGesture.possibleGestures[2].compareGestures(this.player2.chosenGesture);
                 this.scoreKeeper();
                 this.displayGameWinner();
             }
-            if(this.player1.chosenGesture == this.player1.possibleGestures[3] && (this.player2.chosenGesture == this.player2.possibleGestures[1] || this.player2.chosenGesture == this.player2.possibleGestures[5] || this.player2.chosenGesture == this.player2.possibleGestures[3])){
-                this.player1.chosenGesture.compareGestures(this.player2.chosenGesture);
+            if(this.player1.chosenGesture == this.player1.possibleGestures[3] && (this.player2.chosenGesture == this.player2.possibleGestures[1] || this.player2.chosenGesture == this.player2.possibleGestures[4] || this.player2.chosenGesture == this.player2.possibleGestures[3])){
+                this.player1.chosenGesture.possibleGestures[3].compareGestures(this.player2.chosenGesture);
                 this.scoreKeeper();
                 this.displayGameWinner();
             }
             if(this.player1.chosenGesture == this.player1.possibleGestures[4] && (this.player2.chosenGesture == this.player2.possibleGestures[0] || this.player2.chosenGesture == this.player2.possibleGestures[2] || this.player2.chosenGesture == this.player2.possibleGestures[4])){
-                this.player1.chosenGesture.compareGestures(this.player2.chosenGesture);
+                this.player1.chosenGesture.possibleGestures[4].compareGestures(this.player2.chosenGesture);
                 this.scoreKeeper();
                 this.displayGameWinner();
             }
