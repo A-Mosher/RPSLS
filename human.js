@@ -10,7 +10,7 @@ class Human extends Player {
 
     chooseGesture() {
         let gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-        let userInput = prompt("Player 1 do you choose Rock, Paper, Scissors, Lizard, or Spock?");
+        let userInput = prompt(this.name + " do you choose Rock, Paper, Scissors, Lizard, or Spock?");
         if(gestures.includes(userInput)){
             console.log(this.name + " has chosen " + userInput + "!");
             return userInput;

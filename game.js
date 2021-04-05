@@ -45,77 +45,44 @@ class Game {
             this.player1.chosenGesture = this.player1.chooseGesture();
             this.player2.chosenGesture = this.player2.chooseGesture();
             if(this.player1.chosenGesture == this.player1.possibleGestures[0] && (this.player2.chosenGesture == this.player2.possibleGestures[2] || this.player2.chosenGesture == this.player2.possibleGestures[3] || this.player2.chosenGesture == this.player2.possibleGestures[0])){
-                this.player1.possibleGestures.chosenGesture();
+                this.player1.chosenGesture.compareGestures(this.player2.chosenGesture);
+                this.scoreKeeper();
+                displayGameWinner();
             }
             if(this.player1.chosenGesture == this.player1.possibleGestures[1] && (this.player2.chosenGesture == this.player2.possibleGestures[0] || this.player2.chosenGesture == this.player2.possibleGestures[4] || this.player2.chosenGesture == this.player2.possibleGestures[1])){
-                this.player1.possibleGestures.chosenGesture();
+                this.player1.possibleGestures[1].compareGestures(opponentGesture);
+                this.displayGameWinner();
             }
             if(this.player1.chosenGesture == this.player1.possibleGestures[2] && (this.player2.chosenGesture == this.player2.possibleGestures[1] || this.player2.chosenGesture == this.player2.possibleGestures[3] || this.player2.chosenGesture == this.player2.possibleGestures[2])){
-                this.player1.possibleGestures.chosenGesture();
+                this.player1.possibleGestures[2].compareGestures(opponentGesture);
+                this.displayGameWinner();
             }
             if(this.player1.chosenGesture == this.player1.possibleGestures[3] && (this.player2.chosenGesture == this.player2.possibleGestures[1] || this.player2.chosenGesture == this.player2.possibleGestures[5] || this.player2.chosenGesture == this.player2.possibleGestures[3])){
-                this.player1.possibleGestures.chosenGesture();
+                this.player1.possibleGestures[3].compareGestures(opponentGesture);
+                this.displayGameWinner();
             }
             if(this.player1.chosenGesture == this.player1.possibleGestures[4] && (this.player2.chosenGesture == this.player2.possibleGestures[0] || this.player2.chosenGesture == this.player2.possibleGestures[2] || this.player2.chosenGesture == this.player2.possibleGestures[4])){
-                this.player1.possibleGestures.chosenGesture();
+                this.player1.possibleGestures[4].compareGestures(opponentGesture);
+                this.displayGameWinner();
             }
         }    
     }    
 
 
 
-
-
-
-
-
-
-
-
-
-            //     //if(this.player1.possibleGestures)
-            //     switch(chosenGesture){
-            //         case "Rock":
-            //             compareGestures();
-            //             return;
-            //     }
-            // }
-                    // case "Paper":
-                    //     compareGestures();
-                    //     return this.score;
-                    // case "Scissors":
-                    //     compareGestures();
-                    //     return this.score;
-                    // case "Lizard":
-                    //     compareGestures();
-                    //     return this.score;
-                    // case "Spock":
-                    //     compareGestures();
-                    //     return this.score;
-                    // default:
-                    //     return false;
-                //}
-            
-            //if(this.player1.possibleGestures)
-            //player2.chooseGesture();
-
-
-        
-        //}    
+   
         // organizes your other methods
     //}
 
     displayRules(){
         console.log("Welcome to Rock, Paper, Scissors, Lizard, Spock!");
-        console.log("It's very simple: Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard,\
-        Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper,\
-        Paper disproves Spock, Spock vaporizes rock, and as it always has Rock crushes Scissors!");
+        console.log("It's very simple: Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, \nLizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, \nPaper disproves Spock, Spock vaporizes rock, and as it always has Rock crushes Scissors!");
         console.log("Best of 3 wins!")
     }
 
-    //scoreKeeper() {
-
-    //}
+    scoreKeeper(updateScore) {
+        updateScore = this.name.score + compareGestures(opponentGesture);
+    }
 
     //rounds() {
         //if (this.Player1.userinput === this.player1.chooseGesture(gestures[0]);
