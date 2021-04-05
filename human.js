@@ -15,6 +15,10 @@ class Human extends Player {
             console.log(this.name + " has chosen " + userInput + "!");
             return userInput;
         }
+        else{
+            console.log("Invalid Entry, Try again.");
+            this.chooseGesture();
+        }
     }
 }
 

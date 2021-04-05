@@ -32,9 +32,6 @@ class Game {
     }
     
 
-    // OTHER FUNCTION GO DOWN HERE!
-
-
     runGame(){
         this.displayRules();
         //this.player1.chooseGesture();
@@ -50,19 +47,23 @@ class Game {
                 displayGameWinner();
             }
             if(this.player1.chosenGesture == this.player1.possibleGestures[1] && (this.player2.chosenGesture == this.player2.possibleGestures[0] || this.player2.chosenGesture == this.player2.possibleGestures[4] || this.player2.chosenGesture == this.player2.possibleGestures[1])){
-                this.player1.possibleGestures[1].compareGestures(opponentGesture);
+                this.player1.chosenGesture.compareGestures(this.player2.chosenGesture);
+                this.scoreKeeper();
                 this.displayGameWinner();
             }
             if(this.player1.chosenGesture == this.player1.possibleGestures[2] && (this.player2.chosenGesture == this.player2.possibleGestures[1] || this.player2.chosenGesture == this.player2.possibleGestures[3] || this.player2.chosenGesture == this.player2.possibleGestures[2])){
-                this.player1.possibleGestures[2].compareGestures(opponentGesture);
+                this.player1.chosenGesture.compareGestures(this.player2.chosenGesture);
+                this.scoreKeeper();
                 this.displayGameWinner();
             }
             if(this.player1.chosenGesture == this.player1.possibleGestures[3] && (this.player2.chosenGesture == this.player2.possibleGestures[1] || this.player2.chosenGesture == this.player2.possibleGestures[5] || this.player2.chosenGesture == this.player2.possibleGestures[3])){
-                this.player1.possibleGestures[3].compareGestures(opponentGesture);
+                this.player1.chosenGesture.compareGestures(this.player2.chosenGesture);
+                this.scoreKeeper();
                 this.displayGameWinner();
             }
             if(this.player1.chosenGesture == this.player1.possibleGestures[4] && (this.player2.chosenGesture == this.player2.possibleGestures[0] || this.player2.chosenGesture == this.player2.possibleGestures[2] || this.player2.chosenGesture == this.player2.possibleGestures[4])){
-                this.player1.possibleGestures[4].compareGestures(opponentGesture);
+                this.player1.chosenGesture.compareGestures(this.player2.chosenGesture);
+                this.scoreKeeper();
                 this.displayGameWinner();
             }
         }    
@@ -84,11 +85,6 @@ class Game {
         updateScore = this.name.score + compareGestures(opponentGesture);
     }
 
-    //rounds() {
-        //if (this.Player1.userinput === this.player1.chooseGesture(gestures[0]);
-    //}
-
-
     displayGameWinner(){
             if(this.player1.score === 2) {
               console.log(this.player1.name + " wins this game!");
@@ -99,15 +95,14 @@ class Game {
     }
     
 }
-//this.chooseGesture() {
 
 //} 
 //gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 //let rockBeats = (gestures[0] > gestures[2,3]);
 //let paperBeats = (gestures[1] > gestures[0,4]);
 //let scissorsBeats = (gestures[2] > gestures[1,3]);
-//let LizardBeats = (gestures[3] > gestures[5,1]);
-//let SpockBeats = (gestures[5] > gestures[0,3]);
+//let LizardBeats = (gestures[3] > gestures[4,1]);
+//let SpockBeats = (gestures[4] > gestures[0,3]);
 
 
 
